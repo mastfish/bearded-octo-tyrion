@@ -8,10 +8,5 @@ describe "Static pages" do
       page.should have_selector('h1', text: 'Contact')
     end
 
-    it "should have the title 'Contact'" do
-      visit '/contact'
-      page.should have_selector('title',
-                    text: "Ruby on Rails Tutorial Sample App | Contact")
-    end
   end
 end
