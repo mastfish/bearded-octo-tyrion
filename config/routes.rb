@@ -1,4 +1,6 @@
 HouseDo::Application.routes.draw do
+  resources :houses
+
   get "users/new"
 
   match '/help',    to: 'static_pages#help'
