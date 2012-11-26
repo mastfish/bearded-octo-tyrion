@@ -1,0 +1,13 @@
+  <tr>
+    <td><%= house.name %></td>
+	<% if !house_member? %>
+    		<td><%= link_to 'Join', join_url(:id => house.id) %></td>
+	<% else %>
+    		<td><%= link_to 'Show', house %></td>
+  	<% end %>
+    <% if current_user.admin? && !current_user?(user) %>
+    <td><%= link_to 'Edit', edit_house_path(house) %></td>
+		| <%= link_to "delete", user, method: :delete,
+		data: { confirm: "You sure?" } %>
+	<% end %>
+  </tr>
