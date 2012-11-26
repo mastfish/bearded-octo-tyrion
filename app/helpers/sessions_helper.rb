@@ -17,6 +17,10 @@ module SessionsHelper
     user == current_user
   end
 
+  def house_member?
+    signed_in? && current_user.house_id != 0
+  end
+
   def signed_in?
     !current_user.nil?
   end

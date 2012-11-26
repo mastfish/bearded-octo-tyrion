@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121120050732) do
+ActiveRecord::Schema.define(:version => 20121126043130) do
 
   create_table "houses", :force => true do |t|
     t.text     "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20121120050732) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
+    t.integer  "house_id",        :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

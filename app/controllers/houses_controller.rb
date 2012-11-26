@@ -83,4 +83,8 @@ class HousesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def join
+
+  end
 end

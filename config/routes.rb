@@ -1,6 +1,7 @@
 HouseDo::Application.routes.draw do
   resources :houses
-
+  match 'houses/:id/join' => 'house#join', :as => :join
+# match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   get "users/new"
 
   match '/help',    to: 'static_pages#help'

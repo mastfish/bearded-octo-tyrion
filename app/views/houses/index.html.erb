@@ -1,5 +1,6 @@
 <h1>Listing houses</h1>
 
+
 <table>
   <tr>
     <th>Name</th>
@@ -8,14 +9,8 @@
     <th></th>
   </tr>
 
-<% @houses.each do |house| %>
-  <tr>
-    <td><%= house.name %></td>
-    <td><%= link_to 'Show', house %></td>
-    <td><%= link_to 'Edit', edit_house_path(house) %></td>
-    <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <%= render @houses %>
+
 </table>
 
 <br />
